@@ -1,25 +1,3 @@
-// const mongoose = require("mongoose");
-// const Joi = require("joi");
-
-// const homeAppliancesSchema = new mongoose.Schema({
-//     homeAppliances: {
-//         type: String,
-//         required: true
-//     }
-// });
-// const home = mongoose.model("home", homeAppliancesSchema);
-
-// function validatehome ( homeValidate ) {
-//     const schema = {
-//       homeAppliancesSchema: Joi.string()
-//     }
-//     return Joi.validate(homeValidate, schema);
-// };
-
-// exports.validatehome = validatehome;
-// exports.homeAppliancesSchema = homeAppliancesSchema;
-
-// const jwt = require('jsonwebtoken');
 const Joi = require('joi');
 const mongoose = require('mongoose');
 
@@ -31,11 +9,6 @@ const menuSchema = new mongoose.Schema({
     maxlength: 50
   }
 });
-
-// userSchema.methods.generateAuthToken = function() { 
-//   const token = jwt.sign({ _id: this._id, isAdmin: this.isAdmin }, process.env.jwtPrivateKey);
-//   return token;
-// }
 
 const Menu = mongoose.model('Menu', menuSchema);
 
