@@ -2,9 +2,13 @@ const {Menu, validateMenu} = require("./menuM");
 const express = require('express');
 const router = express.Router();
 
-router.get("/", async (req, res) => {
-    const menu = await Menu.find({name: req.body.name});
+router.get("/:id", async (req, res) => {
+    const menu = await Menu.findById(req.params.id);
     res.send(menu);   
+});
+router.get("/", async (req, res) => {
+  const menu = await Menu.find();
+  res.send(menu);   
 });
 router.post("/", async (req, res) => {
     const { error } = validateMenu(req.body);

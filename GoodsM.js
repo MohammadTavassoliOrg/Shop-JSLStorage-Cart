@@ -13,8 +13,19 @@ const goodsSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
+  info: {
+    type: String,
+    required: true
+  },
   menu: {
     type: mongoose.Schema.Types.ObjectId
+  },
+  image: {
+    data: Object
+  },
+  code: {
+    type: String,
+    required: true
   }
 });
 const Goods = mongoose.model('Goods', goodsSchema);
@@ -23,7 +34,9 @@ function validateGoods (goods) {
   const schema = {
     name: Joi.string().min(1).max(225).required(),
     price: Joi.number().required(),
-    menu: Joi.objectId()
+    menu: Joi.objectId(),
+    info: Joi.string().required(),
+    code: Joi.string().required()
   }
   return Joi.validate(goods, schema);
 };

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div class="products"><p id="id010">name</p><p id="id020">info</p><p id="p10">price</p> <p id="id030">code</p> <img id="image0" src="" width="160" height="120"> </div>
+        <div class="products"><p id="id011">name</p><p id="id021">info</p><p id="p11">price</p> <p id="id031">code</p> <img id="image1" src="" width="160" height="120"> </div>
+        <div class="products"><p id="id012">name</p><p id="id022">info</p><p id="p12">price</p> <p id="id032">code</p> <img id="image2" src="" width="160" height="120"> </div>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="./main.js"></script>
+<!-- 
+        <button id="add-item">Add an item to buy</button>
+        <button id="get-items">Get shopping cart list</button>
+        <h1> List of pending goods </h1>
+        <div id="ls-currently"></div> -->
+        <style media="screen">
+            input, button {
+                padding: 7px;
+                height: 40px;
+            }
+            fieldset {
+                margin-bottom: 20px;
+            }
+        </style>
+        <h2 id="title">Cart</h2>
+        <fieldset>
+            <legend>Insert your product</legend>
+            <input id="inpKey" type="text" placeholder="Enter name of product">
+            <input id="inpValue" type="text" placeholder="code">
+            <button type="button" id="btnInsert">Add product</button>
+            <button type="button" id="rmProduct">Clear list of product</button>
+        </fieldset>
+        <fieldset>
+            <legend>List of pending products</legend>
+            <div id="lsOutput"></div>
+        </fieldset>
+        <script type="text/javascript">
+            const inpKey = document.getElementById("inpKey");
+            const inpValue = document.getElementById("inpValue");
+            const btnInsert = document.getElementById("btnInsert");
+            const rmProduct = document.getElementById("rmProduct");
+            const lsOutput = document.getElementById("lsOutput");
+            btnInsert.onclick = function () {
+                const key = inpKey.value;
+                const value = inpValue.value;
+                if (key && value) {
+                    localStorage.setItem(key, value);
+                    location.reload();
+                }
+            };
+            rmProduct.onclick = function () {
+                localStorage.clear();
+                location.reload();
+                };
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                const value = localStorage.getItem(key);
+                lsOutput.innerHTML += `${key}: ${value}<br />`
+            }
+            // function updateUI () {
+            // var values = [], keys = Object.keys(localStorage), i = keys.length;
+            // while (i--) { values.push( localStorage.getItem(keys[i]) ); }
+            // document.getElementById("lsOutput").textContent  = values;
+            // }
+
+        </script>
+    </body>
+</html>
+
