@@ -1,9 +1,3 @@
-// const axios = require("axios").default;
-// function getGoods() {
-//     axios.get("/api/goods")
-//         .then(res => showOutput(res))
-//         .catch(err => console.log(err));    
-// }
 axios.get('http://localhost:3000/api/goods/61f68f30f11f60654da4e1e8')
   .then(function (response) {
   for (let i = 0; i < response.data.length; i++) {
