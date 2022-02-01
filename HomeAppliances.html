@@ -5,12 +5,7 @@
         <div class="products"><p id="id011">name</p><p id="id021">info</p><p id="p11">price</p> <p id="id031">code</p> <img id="image1" src="" width="160" height="120"> </div>
         <div class="products"><p id="id012">name</p><p id="id022">info</p><p id="p12">price</p> <p id="id032">code</p> <img id="image2" src="" width="160" height="120"> </div>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <script src="./main.js"></script>
-<!-- 
-        <button id="add-item">Add an item to buy</button>
-        <button id="get-items">Get shopping cart list</button>
-        <h1> List of pending goods </h1>
-        <div id="ls-currently"></div> -->
+        <script src="./axios/mainHome.js"></script>
         <style media="screen">
             input, button {
                 padding: 7px;
@@ -55,12 +50,6 @@
                 const value = localStorage.getItem(key);
                 lsOutput.innerHTML += `${key}: ${value}<br />`
             }
-            // function updateUI () {
-            // var values = [], keys = Object.keys(localStorage), i = keys.length;
-            // while (i--) { values.push( localStorage.getItem(keys[i]) ); }
-            // document.getElementById("lsOutput").textContent  = values;
-            // }
-
         </script>
     </body>
 </html>

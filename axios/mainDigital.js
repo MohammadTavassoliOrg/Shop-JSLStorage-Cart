@@ -1,10 +1,4 @@
-// const axios = require("axios").default;
-// function getGoods() {
-//     axios.get("/api/goods")
-//         .then(res => showOutput(res))
-//         .catch(err => console.log(err));    
-// }
-axios.get('http://localhost:3000/api/goods')
+axios.get('http://localhost:3000/api/goods/61f84dd96ee69e3640479ad5')
   .then(function (response) {
   for (let i = 0; i < response.data.length; i++) {
     document.getElementById("p1" + i).innerHTML = (response.data[i].price )
