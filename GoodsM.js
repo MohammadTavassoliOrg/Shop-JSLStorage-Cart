@@ -26,7 +26,7 @@ const goodsSchema = new mongoose.Schema({
   code: {
     type: String,
     required: true
-    // like #213
+    // example #213
   }
 });
 const Goods = mongoose.model('Goods', goodsSchema);
