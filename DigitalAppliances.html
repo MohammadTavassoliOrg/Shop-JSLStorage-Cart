@@ -24,35 +24,6 @@
             <div id="lsOutput"></div>
         </fieldset>
         <script type="text/javascript">
-            const rmProduct = document.getElementById("rmProduct");
-            rmProduct.onclick = function () {
-                localStorage.clear();
-                location.reload();
-            };
-            document.getElementById("Add-Smartwatch").addEventListener("click", function () {
-                window.localStorage.setItem("Smart watch", 5000600);
-                location.reload();
-            });
-            document.getElementById("Remove-Smartwatch").addEventListener("click", function () {
-                localStorage.removeItem("Smart watch", 5000600);
-                location.reload();
-            });
-            document.getElementById("Add-Laptop").addEventListener("click", function () {
-                window.localStorage.setItem("Laptop", 46000000);
-                location.reload();
-            });
-            document.getElementById("Remove-Laptop").addEventListener("click", function () {
-                localStorage.removeItem("Laptop", 46000000);
-                location.reload();
-            });
-            document.getElementById("Add-Mobile").addEventListener("click", function () {
-                window.localStorage.setItem("Mobile", 7000000);
-                location.reload();
-            });
-            document.getElementById("Remove-Mobile").addEventListener("click", function () {
-                localStorage.removeItem("Mobile", 7000000);
-                location.reload();
-            });
             for (let i = 0; i < localStorage.length; i++) {
                 const key = localStorage.key(i);
                 const value = localStorage.getItem(key);
