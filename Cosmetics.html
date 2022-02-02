@@ -23,37 +23,8 @@
             <legend>List of pending products</legend>
             <div id="lsOutput"></div>
         </fieldset>
-        <script type="text/javascript">
-            const rmProduct = document.getElementById("rmProduct");
-            rmProduct.onclick = function () {
-                localStorage.clear();
-                location.reload();
-            };
-            document.getElementById("Add-Tissuepaper").addEventListener("click", function () {
-                window.localStorage.setItem("Tissue paper", 100000);
-                location.reload();
-            });
-            document.getElementById("Remove-Tissuepaper").addEventListener("click", function () {
-                localStorage.removeItem("Tissue paper", 100000);
-                location.reload();
-            });
-            document.getElementById("Add-Moisturizinglotion").addEventListener("click", function () {
-                window.localStorage.setItem("Moisturizing lotion", 35000);
-                location.reload();
-            });
-            document.getElementById("Remove-Moisturizinglotion").addEventListener("click", function () {
-                localStorage.removeItem("Moisturizing lotion", 35000);
-                location.reload();
-            });
-            document.getElementById("Add-Sunblockcream").addEventListener("click", function () {
-                window.localStorage.setItem("Sun block cream", 30000);
-                location.reload();
-            });
-            document.getElementById("Remove-Sunblockcream").addEventListener("click", function () {
-                localStorage.removeItem("Sun block cream", 30000);
-                location.reload();
-            });
-            for (let i = 0; i < localStorage.length; i++) {
+        <script>
+              for (let i = 0; i < localStorage.length; i++) {
                 const key = localStorage.key(i);
                 const value = localStorage.getItem(key);
                 lsOutput.innerHTML += `name: ${key} price: ${value}<br />`
