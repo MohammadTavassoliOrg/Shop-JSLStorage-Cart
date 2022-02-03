@@ -12,27 +12,27 @@ axios.get('http://localhost:3000/api/goods/61f84dd96ee69e3640479ad5')
       localStorage.clear();
       location.reload();
   };
-  document.getElementById("Add-Smartwatch").addEventListener("click", function () {
+  document.getElementById("Add-Product1").addEventListener("click", function () {
       window.localStorage.setItem(response.data[0].name, response.data[0].price);
       location.reload();
   });
-  document.getElementById("Remove-Smartwatch").addEventListener("click", function () {
+  document.getElementById("Remove-Product1").addEventListener("click", function () {
       localStorage.removeItem(response.data[0].name, response.data[0].price);
       location.reload();
   });
-  document.getElementById("Add-Laptop").addEventListener("click", function () {
+  document.getElementById("Add-Product2").addEventListener("click", function () {
       window.localStorage.setItem(response.data[1].name, response.data[1].price);
       location.reload();
   });
-  document.getElementById("Remove-Laptop").addEventListener("click", function () {
+  document.getElementById("Remove-Product2").addEventListener("click", function () {
       localStorage.removeItem(response.data[1].name, response.data[1].price);
       location.reload();
   });
-  document.getElementById("Add-Mobile").addEventListener("click", function () {
+  document.getElementById("Add-Product3").addEventListener("click", function () {
       window.localStorage.setItem(response.data[2].name, response.data[2].price);
       location.reload();
   });
-  document.getElementById("Remove-Mobile").addEventListener("click", function () {
+  document.getElementById("Remove-Product3").addEventListener("click", function () {
       localStorage.removeItem(response.data[2].name, response.data[2].price);
       location.reload();
   });

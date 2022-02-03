@@ -12,27 +12,27 @@ axios.get('http://localhost:3000/api/goods/61f8553a68f36d3d8ce2d37f')
       localStorage.clear();
       location.reload();
   };
-  document.getElementById("Add-Tissuepaper").addEventListener("click", function () {
+  document.getElementById("Add-Product1").addEventListener("click", function () {
       window.localStorage.setItem(response.data[0].name, response.data[0].price);
       location.reload();
   });
-  document.getElementById("Remove-Tissuepaper").addEventListener("click", function () {
+  document.getElementById("Remove-Product1").addEventListener("click", function () {
       localStorage.removeItem(response.data[0].name, response.data[0].price);
       location.reload();
   });
-  document.getElementById("Add-Moisturizinglotion").addEventListener("click", function () {
+  document.getElementById("Add-Product2").addEventListener("click", function () {
       window.localStorage.setItem(response.data[1].name, response.data[1].price);
       location.reload();
   });
-  document.getElementById("Remove-Moisturizinglotion").addEventListener("click", function () {
+  document.getElementById("Remove-Product2").addEventListener("click", function () {
       localStorage.removeItem(response.data[1].name, response.data[1].price);
       location.reload();
   });
-  document.getElementById("Add-Sunblockcream").addEventListener("click", function () {
+  document.getElementById("Add-Product3").addEventListener("click", function () {
       window.localStorage.setItem(response.data[2].name, response.data[2].price);
       location.reload();
   });
-  document.getElementById("Remove-Sunblockcream").addEventListener("click", function () {
+  document.getElementById("Remove-Product3").addEventListener("click", function () {
       localStorage.removeItem(response.data[2].name, response.data[2].price);
       location.reload();
   });
