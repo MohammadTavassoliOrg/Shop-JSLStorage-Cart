@@ -19,6 +19,10 @@ const fileStorageEngine = multer.diskStorage({
 
 const upload = multer({ storage: fileStorageEngine });
 
+router.get("/check", (req, res) => {
+  res.send("it's ok!")
+});
+
 router.get("/:id", async (req, res) => {
   const find_goods = await Goods.find({ menu: req.params.id });
   res.status(200).send(find_goods)
