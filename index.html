@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <style>
-            ul {
-              list-style-type: none;
-              margin: 0;
-              padding: 0;
-              overflow: hidden;
-              background-color: #333333;
-            }
-            
-            li {
-              float: left;
-            }
-            
-            li a {
-              display: block;
-              color: white;
-              text-align: center;
-              padding: 16px;
-              text-decoration: none;
-            }
-            
-            li a:hover {
-              background-color: #111111;
-            }
-            </style>
-            </head>
-            <body>
-            
-            <h2>Products Menu</h2>
-            <ul>
-              <li><a href="HomeAppliances.html">Home Appliances</a></li>
-              <li><a href="DigitalAppliances.html">Digital Appliances</a></li>
-              <li><a href="Cosmetics.html">Cosmetics</a></li>
-            </ul>
-    </body>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.vertical-menu {
+  width: 200px;
+}
+
+.vertical-menu a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #1a1a1a;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h1>Product Menu</h1>
+
+<div class="vertical-menu">
+  <a href="#" class="active">Home</a>
+  <a href="/HomeAppliances.html">Home Appliances</a>
+  <a href="/DigitalAppliances.html">Digital Appliances</a>
+  <a href="/Cosmetics.html">Cosmetics</a>
+</div>
+
+</body>
 </html>
