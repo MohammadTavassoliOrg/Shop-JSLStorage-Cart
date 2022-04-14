@@ -12,44 +12,27 @@ axios.get('http://localhost:3000/api/goods/61f68f30f11f60654da4e1e8')
       localStorage.clear();
       location.reload();
   };
-  document.getElementById("Add-Product1").addEventListener("click", function () {
-      window.localStorage.setItem(response.data[0].name, response.data[0].price + " Toman");
-      location.reload();
-  });
-  document.getElementById("Remove-Product1").addEventListener("click", function () {
-      localStorage.removeItem(response.data[0].name, response.data[0].price + " Toman");
-      location.reload();
-  });
-  document.getElementById("Add-Product2").addEventListener("click", function () {
-      let local = localStorage.getItem(response.data[1].name, response.data[1].price + " Toman");
+  for (let x = 0; x<response.data.length; x++) {
+    document.getElementById("Add-Product" + x).addEventListener("click", function () {
+      let local = localStorage.getItem(response.data[x].name, response.data[x].price + " Toman");
       if (local === null) {
-        window.localStorage.setItem(response.data[1].name, response.data[1].price + " Toman");
+        window.localStorage.setItem(response.data[x].name, response.data[x].price + " Toman");
       } else {
         alert("You have already added this product to your cart");
       }
       location.reload();
   });
-  document.getElementById("Remove-Product2").addEventListener("click", function () {
-      let local = localStorage.getItem(response.data[1].name, response.data[1].price + " Toman");
+  document.getElementById("Remove-Product" + x).addEventListener("click", function () {
+      let local = localStorage.getItem(response.data[x].name, response.data[x].price + " Toman");
       if (local === null)  {
         alert("This product is not available in your shopping cart")
       } else {
-        localStorage.removeItem(response.data[1].name, response.data[1].price + " Toman");
+        localStorage.removeItem(response.data[x].name, response.data[x].price + " Toman");
       }
       location.reload();
-  });
-  document.getElementById("Add-Product3").addEventListener("click", function () {
-      window.localStorage.setItem(response.data[2].name, response.data[2].price + " Toman");
-      location.reload();
-  });
-  document.getElementById("Remove-Product3").addEventListener("click", function () {
-      localStorage.removeItem(response.data[2].name, response.data[2].price + " Toman");
-      location.reload();
-  });
-    console.log(response);
-  })
+  })}})
   .catch(function (error) {
     console.log(error);
   })
-  .then(function () {
-  });
+  // .then(function () {
+  // });

@@ -1,4 +1,4 @@
-const {Menu, validateMenu} = require("./menuM");
+const {Menu, validateMenu} = require("../models/menuM");
 const express = require('express');
 const router = express.Router();
 

@@ -1,4 +1,4 @@
-const {Goods, validateGoods} = require("./GoodsM");
+const {Goods, validateGoods} = require("../models/GoodsM");
 const cors = require("cors");
 const multer = require("multer");
 const path = require('path')
@@ -6,7 +6,7 @@ const express = require('express');
 const router = express.Router();
 
 router.use(cors())
-router.use('image', express.static(path.join(__dirname, 'public')))
+router.use('images', express.static(path.join(__dirname, 'public')))
 
 const fileStorageEngine = multer.diskStorage({
   destination: (req, file, cb) => {

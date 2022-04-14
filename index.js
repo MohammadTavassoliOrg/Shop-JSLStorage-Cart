@@ -1,5 +1,5 @@
-const goods = require("./goods");
-const menu = require("./menu");
+const goods = require("./routes/goods");
+const menu = require("./routes/menu");
 require("dotenv").config();
 const Joi = require('joi');
 const mongoose = require('mongoose');
