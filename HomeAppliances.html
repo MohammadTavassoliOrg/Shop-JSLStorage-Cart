@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <body>
+        <center>
         <fieldset>
             <figure>
-                <div class="products"><p id="id010">name</p><button type="button" id="Add-Product1">Add to cart</button><button type="button" id="Remove-Product1">Remove from cart</button><p id="id020">info</p><p id="p10">price</p> <p id="id030">code</p> <img id="image0" src="" width="160" height="120"> </div>
+                <div class="product1"><p id="id010" >name</p><button style="background-color: lawngreen;" type="button" id="Add-Product0"><em>Add to cart</em></button><button style="background-color: crimson;" type="button" id="Remove-Product0"><em>Remove from cart</em></button><p id="id020" >info</p><p id="p10" >price</p> <p id="id030" >code</p> <img id="image0" src="" width="160" height="120"> </div>
             </figure>
         </fieldset>
         <fieldset>
             <figure>
-                <div class="products"><p id="id011">name</p><button type="button" id="Add-Product2">Add to cart</button><button type="button" id="Remove-Product2">Remove from cart</button><p id="id021">info</p><p id="p11">price</p> <p id="id031">code</p> <img id="image1" src="" width="160" height="120"> </div>
+                <div class="product2"><p id="id011" >name</p><button style="background-color: lawngreen;" type="button" id="Add-Product1"><em>Add to cart</em></button><button style="background-color: crimson;" type="button" id="Remove-Product1"><em>Remove from cart</em></button><p id="id021" >info</p><p id="p11" >price</p> <p id="id031" >code</p> <img id="image1" src="" width="160" height="120"> </div>
             </figure>
         </fieldset>
         <fieldset>
             <figure>
-                <div class="products"><p id="id012">name</p><button type="button" id="Add-Product3">Add to cart</button><button type="button" id="Remove-Product3">Remove from cart</button><p id="id022">info</p><p id="p12">price</p> <p id="id032">code</p> <img id="image2" src="" width="160" height="120"> </div>
+                <div class="product3"><p id="id012" >name</p><button style="background-color: lawngreen;" type="button" id="Add-Product2"><em>Add to cart</em></button><button style="background-color: crimson;" type="button" id="Remove-Product2"><em>Remove from cart</em></button><p id="id022" >info</p><p id="p12" >price</p> <p id="id032" >code</p> <img id="image2" src="" width="160" height="120"> </div>
             </figure>    
         </fieldset>
+        <body>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="./axios/mainHome.js"></script>
         <style media="screen">
@@ -32,7 +33,7 @@
             <button type="button" id="rmProduct">Clear list of product</button>
         </fieldset>
         <fieldset>
-            <legend>List of pending products</legend>
+            <legend style="background-color: #CCC;">List of pending products</legend>
             <div id="lsOutput"></div>
         </fieldset>
         <script type="text/javascript">
@@ -42,5 +43,16 @@
                 lsOutput.innerHTML += `name: ${key} price: ${value}<br />`
             };
         </script>
-    </body>
+        </body>
+        <style>
+            div {
+              background-image: url('./backgroundImage/sefid.png');
+            }
+        </style>  
+        <style>
+            body {
+              background-image: url('./backgroundImage/siah.jpeg');
+            }
+        </style>  
+        </center>
 </html>
